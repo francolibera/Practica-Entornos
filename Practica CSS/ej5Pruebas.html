@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Prueba 5</title>
+  <style>
+   h1, h2, h3, h4, h5, h6 {
+    color:red;
+   }
+   div p [href]{
+    color:black;
+   }
+    #ultimo ul {
+    color: yellow;
+    }
+
+    #ultimo ul a {
+        color: blue;
+    }
+
+    div #importante {
+      color: green; 
+    }
+
+     h1 #importante, h2 #importante, h3 #importante, h4 #importante, h5 #importante, h6 #importante {
+      color: red; 
+    }
+
+     h1[title] {
+      color: blue;
+    }
+
+    ol a {
+        text-decoration: none; 
+    }
+
+    ol a:link {
+        color: blue;
+    }
+
+    ol a:visited {
+        color: violet; 
+    }
+  </style>
+</head>
+
+<body>
+  
+  <h1 id="importante"><p id="importante">esto es importante titulo</p></h1>
+  <div >
+    
+    <p id="importante">Este es un párrafo de texto normal</p>
+  </div >
+  <h2>Este es un encabezado de nivel 2</h2>
+  <h3>Este es un encabezado de nivel 3</h3>
+  <h4>Este es un encabezado de nivel 4</h4>
+  <h5>Este es un encabezado de nivel 5</h5>
+  <h6>Este es un encabezado de nivel 6</h6>
+  <h1 title="titulo">Este es un encabezado de nivel 1 con atributo title</h1>
+  <div>
+    <p>Este es un párrafo dentro de un div</p>
+    <div id="ultimo">
+      <ul> 
+        <li>Este texto de la lista será amarillo.</li>
+        <li>Este texto también será amarillo.</li>
+        <li>Pero <a href="pagina.html">este enlace será azul</a>.</li>
+      </ul>
+    </div>
+
+    <p><a href="http://www.google.com.ar">Este es un enlace dentro de un párrafo dentro de un div</a></p>
+  </div>
+
+  <ol>
+    <li><a href="https://www.google.com">Este enlace ya lo visitaste seguro (será violeta)</a></li>
+    <li><a href="https://www.unapaginaquenovistaste123.com">Este enlace no lo visitaste (será azul)</a></li>
+  </ol>
+</body>
+
+</html>

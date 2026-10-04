@@ -1,0 +1,164 @@
+Ejercitación 1
+1. CSS son las siglas de hojas de estilo en cascada. 
+Las hojas de estilo es una tecnología que nos permite controlar
+la apariencia de una página web.
+CSS describe como los elementos dispuestos en la página son
+presentados al usuario.
+Con CSS podemos especificar estilos como el tamaño, fuentes,
+color, espaciado entre textos y recuadros así como el lugar
+donde disponer texto e imágenes en la página
+
+2.
+- El selector (ejemplo: “body”), el cual le dice al navegador la parte del documento que se verá afectada por la regla.                                                                                                   
+- La propiedad (ejemplo, 'color' y 'background-color'), las cuales especifican qué aspecto del diseño va a cambiarse  
+- El valor ('purple' y '#d8da3d'), el cual da el valor para la propiedad.
+
+3. Se le puede dar estilos a un documento a nivel elemento HTML, en la misma linea 
+donde estamos haciendo el html le metemos el estilo. Por ejemplo:
+<h1 style="color:#ff0000;background-color:#ffff00">
+Se puede tambien dar estilos a nivel pagina, al comienzo del html en la seccion de la cabecera
+escribimos <style></style> y dentro escribimos todos los estilos q querramos. Por ejemplo:
+<style>
+h1 {color:#ff0000;background-color:#ffff00}
+</style>
+Y por ultimo la opción mas utilizada porque te permite reutilizar estilos en todas las paginas que quieras,
+es la opcion de crear un archivo externo donde pondremos todos los estilos que querramos, y luego si queremos utilizarlos
+en una pagina simplemente hacemos un href al archivo en la zona de la cabecera. Por ejemplo:
+
+estilos.css 
+body {
+background-color:#eafadd;
+}
+h1 {
+color:#0000cc;
+font-family: times new roman;
+font-size:25px;
+text-align: center;
+text-decoration: underline;
+}
+p {
+color:#555555;
+font-family: verdana;
+text-align: justify;
+}
+
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Problema</title>
+<meta charset="UTF-8">
+<link rel="StyleSheet" href="estilos.css" type="text/css">
+</head>
+<body>
+....
+
+4. Selectores de tipo: identifican a un tipo de elemento dentro del código HTML.
+Selectores de clase: identifica a una clase que nosotros hayamos creado dentro de nuestro código HTML con class = … Para identificar a la clase se empieza con un punto. Ejemplo: .clase {font-weight: bold}
+Selectores de ID: parecido al anterior pero identifican a un ID por lo que se aplican a un único elemento de una página. Para identificar a un ID se escribe con un #. Ejemplo: #titulo1 {text-align: center}
+Selectores de atributo: permiten seleccionar elementos según sus propiedades o valor asignado a esas propiedades. Ejemplo P[CLASS] {margin-left: 1cm} lo cual va a funcionar en cualquier <p></p> con class especificado.
+Selector universal: representa TODOS los elementos de la página. Ejemplo: * {color: red}.
+
+Agrupamiento: si varios selectores comparten estilo, se pueden agrupar con comas. Ejemplo H1, P, .class {font-family: Arial, Sans-serif}
+
+5. Una pseudo-clase en CSS es una palabra clave que se añade a un selector para especificar un estado especial del elemento seleccionado. 
+Permiten aplicar estilos basándose en factores externos como la interacción del usuario, el historial de navegación o la estructura del documento, sin necesidad de añadir clases adicionales al HTML.
+Las pseudo-clases vínculo mas utilizadas son: 
+Las aplicaciones del usuario normalmente muestran los vínculos no visitados de un modo diferenciado de aquellos previamente visitados. 
+CSS proporciona las pseudo-clases ':link' y ':visited' para distinguirlos:
+La pseudo-clase :link se aplica a los vínculos que aún no han sido visitados.
+La pseudo-clase :visited se aplica una vez que el vínculo ha sido visitado por el usuario.
+
+6. La herencia en CSS significa que algunos estilos que se le ponen a un elemento padre se transmiten automáticamente a sus elementos hijos. Ejemplo:
+
+<body>
+<p>Soy un párrafo</p>
+</body> 
+
+Acá, p es hijo de body, por lo que si aplico un estilo a body, se le va a aplicar a p.
+
+7. Es el proceso por el cual los estilos de distintas hojas de estilo y reglas se combinan para decidir cuál se aplica finalmente a un elemento HTML.
+Se llama cascada porque los estilos se van acumulando y superponiendo desde diferentes fuentes, formando una jerarquía.
+
+Ejercicio 2
+
+El estilo del p normal se modifica simplemente la fuente, el tamaño y negrita del texto.
+
+El estilo p destacado modifica lo q es el borde del texto, remarcandolo en azul con un ancho definido.
+
+La tabla no se ve afectada por el cambio de estilos ya q fue puesto para p no para el selector table.
+
+Luego el estilo distinto cambia el color de fondo del parrafo, junto con el color de la letra.
+
+Pudimos ver diferentes usos de estilos, como tambien el aplicar un id para un mismo tipo de selector, permitiendo tener estilos diferentes estilos para
+un mismo selector en un mismo archivo.
+
+Ejercicio 3
+
+Vemos la utilizacion de declaraciones de clase para un selector y su uso.
+
+En el primer texto vemos q utiliza la clase de desarrollo, en donde solo utilizara los estilos puestos en la clase desarrollo font-size: 8px;
+
+En el segundo utiliza la clase quitar, donde utiliza el color rojo definido en la clase 
+
+En el siguiente parrafo como no se utiliza ninguna clase, usa el estilo normal por defecto del selector p.
+
+En el cuarto utiliza la clase "importante", q simplemente aumenta el tamaño del texto.
+
+En el h1 definido no se aplica la clase quitar porq estaba definida para el selector p no para el h1.
+
+Y por ultimo vemos q se pueden utilizar varias clases al mismo tiempo.
+
+Ejercicio 4
+
+La diferencia radica en que, a la izquierda, los estilos se pisan por la jerarquía de los selectores y el estilo en línea. 
+A la derecha, el resultado final es producto de qué propiedades se heredan del <body> y cuáles son sobreescritas por reglas directas del elemento.
+
+Ejercicio 5
+
+1- <style>
+   h1, h2, h3, h4, h5, h6 {
+    color:red;
+   }
+  </style>
+
+2- div p [href]{
+    color:black;
+   }
+
+3-  #ultimo ul {
+    color: yellow;
+    }
+
+    #ultimo ul a {
+        color: blue;
+    }
+
+4-div #importante {
+      color: green; 
+    }
+
+     h1 #importante, h2 #importante, h3 #importante, h4 #importante, h5 #importante, h6 #importante {
+      color: red; 
+    }
+
+5- h1[title] {
+      color: blue;
+    }
+
+6- 
+    ol a {
+        text-decoration: none; 
+    }
+
+    ol a:link {
+        color: blue;
+    }
+
+    ol a:visited {
+        color: violet; 
+    }
+
+
+
+
