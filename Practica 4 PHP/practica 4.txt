@@ -1,0 +1,72 @@
+1 - Variables:
+a: booleana
+b: string
+c: string
+d, f, g: integer
+
+Operadores:
+Unarios: ++
+Binario: *, *=, =
+Ternario: ?:
+
+Funciones: doble($i)--> i parametro
+gettype($a) --> a parametro
+is_int($d) --> d parametro
+is_string($a) --> a parametro
+
+
+Estructuras de control: 
+if (is_int($d)) 
+if (is_string($a)) 
+
+Salidas:
+booleanstringstringinteger1xyzxyz184444
+
+2-
+a) Los tres imprimen 12345678910
+b) Los cuatro son equivalentes imprimen 12345678910
+c)  Si, son equivalentes gracias a los breaks que se usan en cada caso del switch
+
+3-
+a) Genera una tabla en HTML utilizando php, la tabla queda como: <table width = 90% border = '1' ><tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+b)Genera una página que primero te muestra un formulario, y cuando lo enviás, te dice si sos mayor o menor de edad. Todo en el mismo archivo PHP.
+
+4- 
+salida: 
+El 
+El clavel blanco
+
+Esto pasa por que php es secuencial entonces el primer echo tiene las variables $flor y $color estan vacias por eso se muestra solo "El"
+
+5- El ejercicio implementa un contador de visitas usando tres archivos. Como PHP no guarda nada entre una visita y otra, guardamos el numero en un archivo de texto externo.
+
+6- Sí, como estructura de datos son equivalentes si el segundo bloque comienza con $a vacío.
+
+7- 
+a)bar1
+b) 5942
+c) no tiene salida, termina eliminando la variable matriz por completo
+
+8-
+a)Has entrado en esta pagina a las 21 horas, con 36 minutos y 13
+segundos, del 12/10/2026
+
+b)5+6=11
+
+9- sirve para validar si un nombre de usuario es correcto basándose en dos reglas strictly definidas: que su longitud tenga entre 3 y 20 caracteres, y que solo contenga letras, números, guiones medios (-) y guiones bajos (_).
