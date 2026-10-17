@@ -1,0 +1,24 @@
+.violeta {
+  background-color: purple;
+  min-height: 80px;
+}
+
+.sidebar {
+  background-color: pink;
+  min-height: 320px;
+}
+
+.verde {
+  background-color: lightgreen;
+  min-height: 50px;
+}
+
+.gris {
+  background-color: grey;
+  min-height: 80px;
+}
+
+.celeste {
+  background-color: lightblue;
+  min-height: 120px;
+}
