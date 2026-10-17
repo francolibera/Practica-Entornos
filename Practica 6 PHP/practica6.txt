@@ -1,0 +1,60 @@
+Ejercicio 1
+
+Para comenzar la comunicación con un servidor de base de datos MySQL, es
+necesario abrir una conexión a ese servidor. 
+Para inicializar esta conexión, PHP ofrece la función: mysqli_connect($hostname ,
+$nombreUsuario , $contraseña)
+
+Todos sus parámetros son opcionales, pero hay tres de ellos que generalmente son necesarios: 
+hostname, contraseña y nombreUsuario
+
+Una vez abierta la conexión, se debe seleccionar una base de datos para su uso, mediante la función:
+mysqli_select($nombreConexión,
+$nombreBaseDatos)
+
+Esta función debe pasar como parámetro:
+
+nombreBaseDatos y nombreConexión
+
+La función mysqli_query () se utiliza para:
+
+Ejecutar consultas en la base de datos
+
+y requiere como parámetros:
+
+nombreConexión y la query (la propia consulta en el lenguaje de la base de datos)
+
+La cláusula or die() se utiliza para:
+
+Capturar el error
+
+y la función mysqli_error () se puede usar para:
+
+Devuelve el último mensaje de error para la llamada más
+reciente a una función de MySQLi que puede haberse
+ejecutado correctamente o haber fallado.
+
+…………………………………………………………………………………………
+Si la función mysqli_query() es exitosa, el conjunto resultante retornado se almacena en una variable, por ejemplo
+$vResult, y a continuación se puede ejecutar el siguiente código (explicarlo):
+
+<?php
+while ($fila = mysqli_fetch_array($vResultado))
+{
+?>
+<tr>
+ <td><?php echo ($fila[0]); ?></td>
+ <td><?php echo ($fila[1]); ?></td>
+ <td><?php echo ($fila[2']); ?></td>
+</tr>
+<tr>
+ <td colspan="5">
+<?php
+}
+mysqli_free_result($vResultado);
+mysqli_close($link);
+?>
+
+Basicamente va recorriendo fila por fila de lo q le devolvio la base de datos. En cada vuelta se introducen los datos en la variable fila 
+y lo va mostrando. Cuando no quedan mas filas para. Cada indice de fila[x] se va parando y mostrando cada columna de esa fila.
+Para cerra tira mysqli_free_result para liberar la memoria usada y msqli_close para cerrar la conexion con la db. 
